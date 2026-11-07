@@ -1,0 +1,111 @@
+# ==============================================================================
+# F.R.A.U.D.S.H.I.E.L.D. — .gitignore
+# Guards datasets, model binaries, virtual environments, node modules, and secrets
+# ==============================================================================
+
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Testing & Code Coverage
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Datasets & Large Files (Strict Rule: Never push raw/processed data to GitHub)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.csv
+*.tsv
+*.xlsx
+*.parquet
+*.feather
+*.h5
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Machine Learning Models (Serialized artifacts)
+models/*
+!models/.gitkeep
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+*.pt
+*.pth
+
+# Environment Variables, Secrets & Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.crt
+
+# Node & Next.js Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env*.local
+node_modules/
+.next/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

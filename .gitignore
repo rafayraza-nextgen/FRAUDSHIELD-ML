@@ -58,6 +58,7 @@ data/raw/*
 data/processed/*
 !data/processed/.gitkeep
 *.csv
+!reports/*.csv
 *.tsv
 *.xlsx
 *.parquet

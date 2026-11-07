@@ -88,7 +88,7 @@ pip install -r requirements.txt
 
 - [x] **Phase 0**: Project Initialization & GitHub Setup
 - [x] **Phase 1**: Dataset Understanding (PaySim & Schema Analysis)
-- [ ] **Phase 2**: Data Preprocessing & Leakage Prevention Pipeline
+- [x] **Phase 2**: Data Preprocessing & Leakage Prevention Pipeline
 - [ ] **Phase 3**: Exploratory Data Analysis & Visualizations
 - [ ] **Phase 4**: Baseline Machine Learning Models
 - [ ] **Phase 5**: Model Evaluation & Metrics (PR-AUC, ROC-AUC, F1)

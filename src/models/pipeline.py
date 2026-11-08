@@ -170,7 +170,7 @@ class FraudPredictionPipeline:
         else:
             tx_dict = transaction.model_dump()
 
-        tx_id = tx_dict.get("nameOrig", f"tx_{int(time.time()*1000)}")
+        tx_id = tx_dict.get("nameOrig") or f"tx_{int(time.time()*1000)}"
 
         # Convert to single-row DataFrame for preprocessor
         tx_df = pd.DataFrame([tx_dict])

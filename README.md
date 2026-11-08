@@ -95,6 +95,11 @@ npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+### 5. Run Automated Tests & Code Coverage
+```bash
+python -m pytest --cov=src --cov=api tests/ -v
+```
+
 ---
 
 ## 🗺️ Development Roadmap
@@ -110,7 +115,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - [x] **Phase 8**: Production Prediction Pipeline & Model Serialization
 - [x] **Phase 9**: FastAPI REST API Service
 - [x] **Phase 10**: Next.js Dashboard Foundation & Theming (Light/Dark)
-- [ ] **Phase 11**: Automated Testing & Quality Assurance
+- [x] **Phase 11**: Automated Testing & Quality Assurance
 - [ ] **Phase 12**: Final Documentation, Release & Tagging (`v1.0.0`)
 
 ---

@@ -1,5 +1,8 @@
 # 🛡️ F.R.A.U.D.S.H.I.E.L.D. — AI-Powered Fraud Detection System
 
+[![Release: v1.0.0](https://img.shields.io/badge/Release-v1.0.0-blue.svg)](https://github.com/rafayraza-nextgen/FRAUDSHIELD-ML/releases/tag/v1.0.0)
+[![Tests: 50/50 Passed](https://img.shields.io/badge/Tests-50%2F50%20passed-brightgreen.svg)](tests/)
+[![Coverage: 85%](https://img.shields.io/badge/Coverage-85%25-brightgreen.svg)](tests/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python: 3.12](https://img.shields.io/badge/Python-3.12-brightgreen.svg)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688.svg)](https://fastapi.tiangolo.com)
@@ -7,6 +10,9 @@
 
 > **Financial Risk Assessment & Unauthorized Data Shield**
 > An enterprise-grade, end-to-end Machine Learning platform designed to detect and explain potentially fraudulent financial transactions across heterogeneous transaction datasets.
+>
+> 📖 **Read the Full Project Report**: [docs/project_report.md](docs/project_report.md)  
+> 🏛️ **System Architecture Blueprint**: [docs/architecture.md](docs/architecture.md)
 
 ---
 
@@ -116,7 +122,7 @@ python -m pytest --cov=src --cov=api tests/ -v
 - [x] **Phase 9**: FastAPI REST API Service
 - [x] **Phase 10**: Next.js Dashboard Foundation & Theming (Light/Dark)
 - [x] **Phase 11**: Automated Testing & Quality Assurance
-- [ ] **Phase 12**: Final Documentation, Release & Tagging (`v1.0.0`)
+- [x] **Phase 12**: Final Documentation, Release & Tagging (`v1.0.0`)
 
 ---
 

@@ -150,16 +150,16 @@ class FraudPredictionPipeline:
 
     def _determine_risk_tier(self, score: float, is_fraud: bool) -> Tuple[RiskTier, str]:
         """Categorizes transaction into operational risk tiers and provides actions."""
-        if score >= 70.0 or is_fraud:
+        if score >= 75.0:
             return RiskTier.HIGH, "DECLINE_OR_STEP_UP_VERIFICATION"
-        elif score >= 30.0:
+        elif score >= 50.0 or is_fraud:
             return RiskTier.MODERATE, "STEP_UP_CHALLENGE_2FA"
         return RiskTier.LOW, "AUTO_APPROVE"
 
     def predict_single(self, transaction: Union[Dict[str, Any], TransactionInput]) -> PredictionOutput:
         """
         Executes real-time inference on a single transaction payload.
-        Returns validated PredictionOutput schema with probability, risk score, tier, and SHAP explanation.
+        Returns validated PredictionOutput schema with probability, calibrated risk score, tier, and SHAP explanation.
         """
         start_time = time.perf_counter()
 
@@ -183,7 +183,14 @@ class FraudPredictionPipeline:
             prob = float(self.model.predict(transformed_df)[0])
 
         is_fraud = bool(prob >= self.optimal_threshold)
-        risk_score = round(min(100.0, max(0.0, prob * 100.0)), 1)
+
+        # Calibrated risk score (0 to 100) mapped around optimal threshold
+        if prob < self.optimal_threshold:
+            risk_score = (prob / max(1e-6, self.optimal_threshold)) * 50.0
+        else:
+            risk_score = 50.0 + ((prob - self.optimal_threshold) / max(1e-6, 1.0 - self.optimal_threshold)) * 50.0
+
+        risk_score = round(float(np.clip(risk_score, 0.0, 100.0)), 1)
         risk_tier, recommendation = self._determine_risk_tier(risk_score, is_fraud)
 
         # Generate Explainability Attribution

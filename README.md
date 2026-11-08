@@ -82,6 +82,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### 3. Run the FastAPI REST Server
+```bash
+uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+```
+Interactive API documentation is available at `http://localhost:8000/docs` (Swagger UI) and `http://localhost:8000/redoc`.
+
 ---
 
 ## 🗺️ Development Roadmap
@@ -95,7 +101,7 @@ pip install -r requirements.txt
 - [x] **Phase 6**: Class Imbalance Handling & Threshold Tuning
 - [x] **Phase 7**: Explainable AI (SHAP Global & Local Attribution)
 - [x] **Phase 8**: Production Prediction Pipeline & Model Serialization
-- [ ] **Phase 9**: FastAPI REST API Service
+- [x] **Phase 9**: FastAPI REST API Service
 - [ ] **Phase 10**: Next.js Dashboard Foundation & Theming (Light/Dark)
 - [ ] **Phase 11**: Automated Testing & Quality Assurance
 - [ ] **Phase 12**: Final Documentation, Release & Tagging (`v1.0.0`)

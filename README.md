@@ -88,6 +88,13 @@ uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 Interactive API documentation is available at `http://localhost:8000/docs` (Swagger UI) and `http://localhost:8000/redoc`.
 
+### 4. Run the Next.js Cyber-Fintech Dashboard
+```bash
+cd frontend
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
 ---
 
 ## 🗺️ Development Roadmap
@@ -102,7 +109,7 @@ Interactive API documentation is available at `http://localhost:8000/docs` (Swag
 - [x] **Phase 7**: Explainable AI (SHAP Global & Local Attribution)
 - [x] **Phase 8**: Production Prediction Pipeline & Model Serialization
 - [x] **Phase 9**: FastAPI REST API Service
-- [ ] **Phase 10**: Next.js Dashboard Foundation & Theming (Light/Dark)
+- [x] **Phase 10**: Next.js Dashboard Foundation & Theming (Light/Dark)
 - [ ] **Phase 11**: Automated Testing & Quality Assurance
 - [ ] **Phase 12**: Final Documentation, Release & Tagging (`v1.0.0`)
 

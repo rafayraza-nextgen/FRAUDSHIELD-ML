@@ -93,7 +93,7 @@ pip install -r requirements.txt
 - [x] **Phase 4**: Baseline Machine Learning Models
 - [x] **Phase 5**: Model Evaluation & Metrics (PR-AUC, ROC-AUC, F1)
 - [x] **Phase 6**: Class Imbalance Handling & Threshold Tuning
-- [ ] **Phase 7**: Explainable AI (SHAP Global & Local Attribution)
+- [x] **Phase 7**: Explainable AI (SHAP Global & Local Attribution)
 - [ ] **Phase 8**: Production Prediction Pipeline & Model Serialization
 - [ ] **Phase 9**: FastAPI REST API Service
 - [ ] **Phase 10**: Next.js Dashboard Foundation & Theming (Light/Dark)

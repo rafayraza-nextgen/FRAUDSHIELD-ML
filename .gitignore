@@ -72,6 +72,7 @@ data/processed/*
 # Machine Learning Models (Serialized artifacts)
 models/*
 !models/.gitkeep
+!models/*.json
 *.joblib
 *.pkl
 *.pickle
